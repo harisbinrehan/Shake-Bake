@@ -36,11 +36,8 @@ export function Header() {
         aria-label="Johnson County Card Show — home"
         className="flex items-center gap-3 bg-transparent border-0 p-0 cursor-pointer"
       >
-        <img src={LOGO} alt="Shake & Bake logo" className="w-11 h-11 object-cover border border-white/[.18]" />
-        <span className="flex flex-col items-start leading-none">
-          <span className="font-display text-[19px] tracking-[.04em] text-white">JCCS</span>
-          <span className="font-cond text-[11px] tracking-[.28em] text-ember uppercase mt-[3px]">Shake &amp; Bake</span>
-        </span>
+        <img src={LOGO} alt="Shake & Bake logo" className="w-11 h-11 object-contain" />
+        <span className="font-display text-[19px] tracking-[.04em] text-white uppercase">Shake &amp; Bake</span>
       </button>
 
       <nav aria-label="Primary" className="hidden md:flex items-center gap-[clamp(14px,2vw,30px)]">

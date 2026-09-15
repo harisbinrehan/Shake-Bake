@@ -14,11 +14,8 @@ export function Footer() {
         <div className="grid gap-[clamp(24px,4vw,54px)] [grid-template-columns:repeat(auto-fit,minmax(220px,1fr))]">
           <div>
             <div className="flex items-center gap-3">
-              <img src={LOGO} alt="Shake & Bake logo" className="w-[54px] h-[54px] object-cover border border-white/[.18]" />
-              <div className="leading-none">
-                <div className="font-display text-2xl tracking-[.03em]">JCCS</div>
-                <div className="font-cond text-[11px] tracking-[.28em] text-ember mt-[5px] uppercase">Shake &amp; Bake</div>
-              </div>
+              <img src={LOGO} alt="Shake & Bake logo" className="w-[54px] h-[54px] object-contain" />
+              <div className="font-display text-2xl tracking-[.03em] uppercase">Shake &amp; Bake</div>
             </div>
             <p className="mt-5 max-w-[300px] text-sm leading-[1.7] text-muted">
               Where collectors, vendors, and hobby enthusiasts come together.

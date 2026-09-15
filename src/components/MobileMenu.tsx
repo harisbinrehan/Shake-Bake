@@ -12,7 +12,7 @@ export function MobileMenu() {
   return (
     <div role="dialog" aria-modal="true" aria-label="Menu" className="fixed inset-0 z-[200] bg-ink flex flex-col animate-rise">
       <div className="flex items-center justify-between px-[18px] h-[86px] border-b border-white/10 flex-none">
-        <span className="font-display text-[19px] tracking-[.04em]">JCCS</span>
+        <span className="font-display text-[19px] tracking-[.04em] uppercase">Shake &amp; Bake</span>
         <button
           type="button"
           onClick={closeMenu}
