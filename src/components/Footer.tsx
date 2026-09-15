@@ -2,10 +2,8 @@ import { Link } from "react-router-dom";
 import { footerNav } from "../data/nav";
 import { socialDefs } from "../data/socials";
 import { contacts, legalLinks, venue } from "../data/venue";
-import { wixImage } from "../data/media";
 import { useIsMobile } from "../hooks/useViewport";
-
-const LOGO = wixImage("03c59c_2b0d31c5ada746598c19a50709c85e64~mv2.jpeg", 160, 160);
+import LOGO from "../assets/logo.png";
 
 export function Footer() {
   const isMobile = useIsMobile();

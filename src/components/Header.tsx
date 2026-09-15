@@ -2,9 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { primaryNav } from "../data/nav";
 import { useUI } from "../context/UIContext";
-import { wixImage } from "../data/media";
-
-const LOGO = wixImage("03c59c_2b0d31c5ada746598c19a50709c85e64~mv2.jpeg", 160, 160);
+import LOGO from "../assets/logo.png";
 
 export function Header() {
   const [compact, setCompact] = useState(false);
