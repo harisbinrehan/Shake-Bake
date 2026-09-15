@@ -85,7 +85,7 @@ export function AboutPage() {
 
       <Reveal as="section" className="border-t border-white/10">
         <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(44px,6vw,100px)]">
-          <h2 className="m-0 mb-[clamp(22px,3vw,40px)] font-display text-[clamp(32px,5vw,76px)] leading-[.88] uppercase">
+          <h2 className="m-0 mb-[clamp(22px,3vw,40px)] font-display text-[clamp(32px,5vw,76px)] leading-[.98] uppercase">
             The Founders
           </h2>
           <div className="grid gap-[clamp(20px,3vw,44px)]" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))" }}>

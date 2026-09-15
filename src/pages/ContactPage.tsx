@@ -36,7 +36,7 @@ export function ContactPage() {
       <section className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] pt-[clamp(120px,15vw,200px)] pb-[clamp(50px,7vw,110px)] grid gap-[clamp(26px,4vw,70px)]" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(min(300px,100%),1fr))" }}>
         <div>
           <span className="font-cond text-xs tracking-[.3em] uppercase text-ember">Contact</span>
-          <h1 className="mt-3.5 font-display text-[clamp(38px,7vw,116px)] leading-[.84] tracking-[-.02em] uppercase">
+          <h1 className="mt-3.5 font-display text-[clamp(38px,7vw,116px)] leading-[.92] tracking-[-.02em] uppercase">
             Want to be part of our show?
           </h1>
           <div className="mt-[34px] flex flex-col gap-px bg-white/[.12] border border-white/[.12]">

@@ -30,7 +30,7 @@ export function Newsletter() {
     <section aria-labelledby="news" className="border-t border-white/10 bg-ember text-ink">
       <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(48px,7vw,100px)] grid gap-[clamp(22px,4vw,60px)] items-center [grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr))]">
         <div>
-          <h2 id="news" className="m-0 font-display text-[clamp(32px,5vw,76px)] leading-[.88] uppercase text-ink">
+          <h2 id="news" className="m-0 font-display text-[clamp(32px,5vw,76px)] leading-[.98] uppercase text-ink">
             Never miss the next show.
           </h2>
           <p className="mt-4 max-w-[460px] text-base leading-[1.6]" style={{ color: "rgba(10,10,11,.78)" }}>

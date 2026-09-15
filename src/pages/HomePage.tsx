@@ -25,7 +25,7 @@ export function HomePage() {
   return (
     <div>
       {/* HERO */}
-      <section aria-label="Johnson County Card Show" className="relative min-h-[100svh] flex flex-col justify-end overflow-hidden border-b border-white/10">
+      <section aria-label="Johnson County Card Show" className="min-h-viewport relative flex flex-col justify-end overflow-hidden border-b border-white/10">
         <video autoPlay muted loop playsInline preload="metadata" poster={HERO_POSTER} aria-hidden="true" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "saturate(.85) contrast(1.05)" }}>
           <source src={HERO_VIDEO} type="video/mp4" />
         </video>
@@ -37,7 +37,7 @@ export function HomePage() {
             <span className="w-[7px] h-[7px] bg-ember rounded-full animate-pulse2" />
             <span className="font-cond text-xs tracking-[.26em] uppercase">Hosted by Shake &amp; Bake · Olathe, KS</span>
           </div>
-          <h1 className="m-0 font-display text-[clamp(46px,10.2vw,172px)] leading-[.84] tracking-[-.015em] uppercase [text-wrap:balance]">
+          <h1 className="m-0 font-display text-[clamp(46px,10.2vw,172px)] leading-[.92] tracking-[-.015em] uppercase [text-wrap:balance]">
             Johnson County
             <br />
             <span className="text-ember">Card Show</span>
@@ -94,7 +94,7 @@ export function HomePage() {
       {/* UP NEXT */}
       <Reveal as="section" aria-labelledby="upnext" className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,120px)]">
         <div className="flex items-baseline justify-between gap-5 flex-wrap mb-[clamp(22px,3vw,38px)]">
-          <h2 id="upnext" className="m-0 font-display text-[clamp(34px,5.4vw,84px)] leading-[.9] tracking-[-.01em] uppercase">
+          <h2 id="upnext" className="m-0 font-display text-[clamp(34px,5.4vw,84px)] leading-[.96] tracking-[-.01em] uppercase">
             Up Next
           </h2>
           <Link to="/shows" className="font-cond text-sm font-semibold tracking-[.22em] uppercase text-muted border-b border-white/25 hover:text-white hover:border-ember transition-colors">
@@ -117,7 +117,7 @@ export function HomePage() {
           </div>
           <div className="bg-[#0E0E10] p-[clamp(24px,3.4vw,52px)] flex flex-col justify-center">
             <span className="font-cond text-xs tracking-[.3em] uppercase text-ember">Homefield Olathe · Olathe, KS</span>
-            <h3 className="mt-3 font-display text-[clamp(30px,3.6vw,56px)] leading-[.94] tracking-[-.005em] uppercase">
+            <h3 className="mt-3 font-display text-[clamp(30px,3.6vw,56px)] leading-[.98] tracking-[-.005em] uppercase">
               September 26–27
             </h3>
             <p className="mt-2.5 font-cond text-[clamp(16px,1.6vw,20px)] font-semibold tracking-[.1em] uppercase text-offwhite">
@@ -148,7 +148,7 @@ export function HomePage() {
       {/* ONE SHOW EVERY KIND OF COLLECTOR */}
       <Reveal as="section" aria-labelledby="find" className="border-t border-white/10 bg-[#0C0C0E]">
         <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,120px)]">
-          <h2 id="find" className="m-0 mb-[clamp(24px,3vw,44px)] font-display text-[clamp(34px,6.4vw,104px)] leading-[.86] tracking-[-.015em] uppercase">
+          <h2 id="find" className="m-0 mb-[clamp(24px,3vw,44px)] font-display text-[clamp(34px,6.4vw,104px)] leading-[.93] tracking-[-.015em] uppercase">
             One show.
             <br />
             <span className="text-muted">Every kind of collector.</span>
@@ -179,7 +179,7 @@ export function HomePage() {
         <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,120px)] grid gap-[clamp(24px,4vw,64px)] items-center" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(min(300px,100%),1fr))" }}>
           <div>
             <span className="font-cond text-xs tracking-[.3em] uppercase text-ember">The Experience</span>
-            <h2 id="more" className="mt-3.5 font-display text-[clamp(34px,5.4vw,86px)] leading-[.86] tracking-[-.015em] uppercase">
+            <h2 id="more" className="mt-3.5 font-display text-[clamp(34px,5.4vw,86px)] leading-[.93] tracking-[-.015em] uppercase">
               More than
               <br />a card show
             </h2>
@@ -208,7 +208,7 @@ export function HomePage() {
       <Reveal as="section" aria-labelledby="upcoming" className="border-t border-white/10 bg-[#0C0C0E]">
         <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,120px)]">
           <div className="flex items-baseline justify-between gap-5 flex-wrap mb-[clamp(22px,3vw,38px)]">
-            <h2 id="upcoming" className="m-0 font-display text-[clamp(34px,5.4vw,84px)] leading-[.9] uppercase">2026 Tour Dates</h2>
+            <h2 id="upcoming" className="m-0 font-display text-[clamp(34px,5.4vw,84px)] leading-[.96] uppercase">2026 Tour Dates</h2>
             <Link to="/shows" className="font-cond text-sm font-semibold tracking-[.22em] uppercase text-muted border-b border-white/25 hover:text-white hover:border-ember transition-colors">
               All shows
             </Link>
@@ -218,7 +218,7 @@ export function HomePage() {
               <div key={s.id} className="grid gap-[clamp(10px,2vw,28px)] items-center py-[clamp(18px,2.4vw,26px)] px-[clamp(4px,1vw,14px)] border-t border-white/[.12] hover:bg-white/[.035] transition-colors" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))" }}>
                 <div className="flex items-baseline gap-3">
                   <span className="font-cond text-[15px] font-bold tracking-[.2em] text-ember">{s.mon}</span>
-                  <span className="font-display text-[clamp(34px,4vw,58px)] leading-[.9]">{s.day}</span>
+                  <span className="font-display text-[clamp(34px,4vw,58px)] leading-[.96]">{s.day}</span>
                 </div>
                 <h3 className="m-0 font-cond text-[clamp(19px,2vw,26px)] font-bold tracking-[.06em] uppercase">{s.title}</h3>
                 <p className="m-0 font-cond text-[15px] tracking-[.1em] uppercase text-muted">
@@ -246,7 +246,7 @@ export function HomePage() {
         <div aria-hidden="true" className="absolute inset-0" style={{ background: "linear-gradient(90deg,rgba(10,10,11,.96) 0%,rgba(10,10,11,.82) 45%,rgba(255,61,20,.35) 100%)" }} />
         <div className="relative max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,120px)]">
           <span className="font-cond text-xs tracking-[.3em] uppercase" style={{ color: "#F2C14E" }}>Vendors</span>
-          <h2 id="vendband" className="mt-3.5 font-display text-[clamp(40px,8vw,128px)] leading-[.84] tracking-[-.02em] uppercase">
+          <h2 id="vendband" className="mt-3.5 font-display text-[clamp(40px,8vw,128px)] leading-[.92] tracking-[-.02em] uppercase">
             Sell. Trade.
             <br />Connect.
           </h2>
@@ -270,7 +270,7 @@ export function HomePage() {
         <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,120px)] grid gap-[clamp(24px,4vw,64px)]" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(min(300px,100%),1fr))" }}>
           <div>
             <span className="font-cond text-xs tracking-[.3em] uppercase text-ember">Our Story</span>
-            <h2 id="story" className="mt-3.5 font-display text-[clamp(32px,4.6vw,72px)] leading-[.88] uppercase">
+            <h2 id="story" className="mt-3.5 font-display text-[clamp(32px,4.6vw,72px)] leading-[.98] uppercase">
               Built by collectors.
               <br />Created for the community.
             </h2>
@@ -303,7 +303,7 @@ export function HomePage() {
       <Reveal as="section" aria-labelledby="media" className="border-t border-white/10 bg-[#0C0C0E]">
         <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,120px)]">
           <div className="flex items-baseline justify-between gap-[18px] flex-wrap mb-[26px]">
-            <h2 id="media" className="m-0 font-display text-[clamp(34px,5.4vw,84px)] leading-[.9] uppercase">The Show</h2>
+            <h2 id="media" className="m-0 font-display text-[clamp(34px,5.4vw,84px)] leading-[.96] uppercase">The Show</h2>
             <div className="flex gap-[18px]">
               <Link to="/gallery" className="font-cond text-sm font-semibold tracking-[.22em] uppercase text-muted border-b border-white/25 hover:text-white hover:border-ember transition-colors">
                 Gallery
@@ -326,7 +326,7 @@ export function HomePage() {
         <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,120px)] grid gap-[clamp(24px,4vw,64px)] items-center" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(min(300px,100%),1fr))" }}>
           <div>
             <span className="font-cond text-xs tracking-[.3em] uppercase text-ember">The Venue</span>
-            <h2 id="venueband" className="mt-3.5 font-display text-[clamp(34px,5.4vw,84px)] leading-[.88] uppercase">
+            <h2 id="venueband" className="mt-3.5 font-display text-[clamp(34px,5.4vw,84px)] leading-[.98] uppercase">
               Homefield
               <br />Olathe
             </h2>
@@ -352,7 +352,7 @@ export function HomePage() {
         <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,110px)]">
           <div className="grid gap-[clamp(24px,4vw,54px)] items-end mb-7" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))" }}>
             <div>
-              <h2 id="social" className="m-0 font-display text-[clamp(34px,5.4vw,84px)] leading-[.9] uppercase">Follow the show</h2>
+              <h2 id="social" className="m-0 font-display text-[clamp(34px,5.4vw,84px)] leading-[.96] uppercase">Follow the show</h2>
               <p className="mt-4 max-w-[520px] text-base leading-[1.7] text-body">
                 Stay connected with Shake &amp; Bake Sports Cards &amp; Collectibles. Get show updates, rare finds,
                 vendor highlights, giveaways, and behind-the-scenes moments from our events. Join the community. Share

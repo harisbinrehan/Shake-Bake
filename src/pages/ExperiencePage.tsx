@@ -45,7 +45,7 @@ export function ExperiencePage() {
 
       <Reveal as="section" className="border-t border-white/10 bg-[#0C0C0E]">
         <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(44px,6vw,100px)]">
-          <h2 className="m-0 mb-[clamp(20px,3vw,36px)] font-display text-[clamp(30px,4.4vw,66px)] leading-[.9] uppercase">
+          <h2 className="m-0 mb-[clamp(20px,3vw,36px)] font-display text-[clamp(30px,4.4vw,66px)] leading-[.96] uppercase">
             Collectibles on the floor
           </h2>
           <div className="grid gap-3" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))" }}>
@@ -69,7 +69,7 @@ export function ExperiencePage() {
         <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(44px,6vw,100px)] grid gap-[clamp(24px,4vw,64px)] items-center" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(min(300px,100%),1fr))" }}>
           <img src={wixImage("f26660_c58af02306f3421aabe450ab62c40fde~mv2.jpg", 1200, 900)} alt="Collectors trading at the show" loading="lazy" className="w-full aspect-[4/3] object-cover border border-white/[.12]" />
           <div>
-            <h2 className="m-0 font-display text-[clamp(30px,4vw,60px)] leading-[.9] uppercase">Community</h2>
+            <h2 className="m-0 font-display text-[clamp(30px,4vw,60px)] leading-[.96] uppercase">Community</h2>
             <p className="mt-4 text-base leading-[1.75] text-body">
               The hobby is better when it's shared. We are a community-first brand dedicated to bringing collectors,
               fans, and vendors together through high-energy shows, trusted transactions, and a genuine love for

@@ -11,7 +11,7 @@ export function VideosPage() {
     <div>
       <section className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] pt-[clamp(120px,15vw,200px)] pb-[clamp(24px,3vw,40px)]">
         <span className="font-cond text-xs tracking-[.3em] uppercase text-ember">Video</span>
-        <h1 className="mt-3.5 font-display text-[clamp(40px,8.4vw,140px)] leading-[.84] tracking-[-.02em] uppercase">
+        <h1 className="mt-3.5 font-display text-[clamp(40px,8.4vw,140px)] leading-[.92] tracking-[-.02em] uppercase">
           JCCS Video Gallery
         </h1>
       </section>

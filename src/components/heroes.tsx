@@ -31,7 +31,7 @@ export function FadedHero({
       <div aria-hidden="true" className="absolute inset-0" style={{ background: gradient }} />
       <div className="relative max-w-[1440px] mx-auto">
         <span className="font-cond text-xs tracking-[.3em] uppercase text-ember">{kicker}</span>
-        <h1 className="mt-3.5 font-display text-[clamp(44px,9vw,150px)] leading-[.84] tracking-[-.02em] uppercase">
+        <h1 className="mt-3.5 font-display text-[clamp(44px,9vw,150px)] leading-[.92] tracking-[-.02em] uppercase">
           {title}
         </h1>
         {description && <p className="mt-5 max-w-[560px] text-[clamp(15px,1.4vw,18px)] leading-[1.7] text-body">{description}</p>}
@@ -83,7 +83,7 @@ export function TallHero({
             {kicker}
           </span>
         )}
-        <h1 className="mt-3.5 font-display text-[clamp(46px,10vw,168px)] leading-[.84] tracking-[-.02em] uppercase">
+        <h1 className="mt-3.5 font-display text-[clamp(46px,10vw,168px)] leading-[.92] tracking-[-.02em] uppercase">
           {title}
         </h1>
         {description && <p className="mt-5 max-w-[560px] text-[clamp(15px,1.5vw,19px)] leading-[1.7] text-offwhite">{description}</p>}
@@ -108,7 +108,7 @@ export function PlainIntro({
   return (
     <section className="mx-auto px-[clamp(18px,4vw,56px)] pt-[clamp(120px,15vw,200px)] pb-[clamp(24px,3vw,44px)]" style={{ maxWidth }}>
       <span className="font-cond text-xs tracking-[.3em] uppercase text-ember">{kicker}</span>
-      <h1 className="mt-3.5 font-display text-[clamp(44px,9vw,150px)] leading-[.84] tracking-[-.02em] uppercase">
+      <h1 className="mt-3.5 font-display text-[clamp(44px,9vw,150px)] leading-[.92] tracking-[-.02em] uppercase">
         {title}
       </h1>
       {description && <p className="mt-[18px] max-w-[560px] text-base leading-[1.7] text-body">{description}</p>}

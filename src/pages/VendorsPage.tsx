@@ -55,7 +55,7 @@ export function VendorsPage() {
       </TallHero>
 
       <section className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(44px,6vw,100px)]">
-        <h2 className="m-0 mb-[clamp(22px,3vw,40px)] font-display text-[clamp(32px,5vw,76px)] leading-[.88] uppercase">
+        <h2 className="m-0 mb-[clamp(22px,3vw,40px)] font-display text-[clamp(32px,5vw,76px)] leading-[.98] uppercase">
           Why vend at JCCS?
         </h2>
         <div className="grid gap-px bg-white/[.12] border border-white/[.12]" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))" }}>
@@ -78,7 +78,7 @@ export function VendorsPage() {
 
       <section className="border-t border-white/10 bg-[#0C0C0E]">
         <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(44px,6vw,100px)]">
-          <h2 className="m-0 mb-[clamp(20px,3vw,36px)] font-display text-[clamp(30px,4.4vw,66px)] leading-[.9] uppercase">
+          <h2 className="m-0 mb-[clamp(20px,3vw,36px)] font-display text-[clamp(30px,4.4vw,66px)] leading-[.96] uppercase">
             Upcoming vendor opportunities
           </h2>
           <div className="grid gap-3.5" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))" }}>
@@ -88,7 +88,7 @@ export function VendorsPage() {
                   <span className="font-cond text-sm font-bold tracking-[.2em]" style={{ color: "#F2C14E" }}>
                     {s.mon}
                   </span>
-                  <span className="font-display text-[38px] leading-[.9]">{s.day}</span>
+                  <span className="font-display text-[38px] leading-[.96]">{s.day}</span>
                 </div>
                 <h3 className="mt-3.5 font-cond text-xl font-bold tracking-[.06em] uppercase">{s.title}</h3>
                 <p className="mt-2.5 mb-[18px] text-sm leading-[1.65] text-muted flex-1">

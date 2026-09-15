@@ -63,6 +63,11 @@ select {
   background: #ff3d14;
 }
 
+.min-h-viewport {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
 [data-reveal] {
   opacity: 0;
   transform: translateY(30px);

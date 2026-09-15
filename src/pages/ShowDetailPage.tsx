@@ -29,7 +29,7 @@ export function ShowDetailPage() {
           <Link to="/shows" className="inline-block mb-[18px] font-cond text-[13px] font-semibold tracking-[.22em] uppercase text-muted hover:text-white">
             ← All shows
           </Link>
-          <h1 className="m-0 font-display text-[clamp(38px,7vw,110px)] leading-[.86] tracking-[-.015em] uppercase">
+          <h1 className="m-0 font-display text-[clamp(38px,7vw,110px)] leading-[.93] tracking-[-.015em] uppercase">
             Johnson County Card Show
           </h1>
           <p className="mt-3.5 font-cond text-[clamp(20px,3vw,40px)] font-semibold tracking-[.06em] uppercase text-ember">
