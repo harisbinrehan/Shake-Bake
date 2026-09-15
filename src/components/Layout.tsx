@@ -6,7 +6,6 @@ import { Footer } from "./Footer";
 import { MobileCTA } from "./MobileCTA";
 import { Newsletter } from "./Newsletter";
 import { Lightbox } from "./Lightbox";
-import { TicketModal } from "./TicketModal";
 import { VendorModal } from "./VendorModal";
 import { useUI } from "../context/UIContext";
 
@@ -29,7 +28,6 @@ export function Layout() {
       <Footer />
       <MobileCTA />
       <Lightbox />
-      {modal === "tickets" && <TicketModal />}
       {modal === "vendor" && <VendorModal />}
     </div>
   );

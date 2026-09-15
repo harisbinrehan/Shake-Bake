@@ -13,8 +13,8 @@ export const faqDefs: FaqDef[] = [
     a: "The next show on the 2026 tour is the September 2-Day Show on September 26–27. Saturday runs 10:00 AM – 5:00 PM and Sunday runs 10:00 AM – 4:00 PM.",
   },
   {
-    q: "How much are tickets?",
-    a: 'Ticket information is coming soon. Pricing has not been announced — join the newsletter or use the "Notify me" step in the ticket flow and we\'ll let you know the moment it\'s live.',
+    q: "Do I need to buy a ticket?",
+    a: "No advance ticket is required — just walk in during show hours. Want to set up as a vendor? Reserve a table through the official form for that show.",
   },
   {
     q: "How do I reserve a vendor table?",

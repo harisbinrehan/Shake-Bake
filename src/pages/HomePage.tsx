@@ -14,7 +14,7 @@ const HERO_POSTER = wixImage("f26660_0e21358cc6464517b8ae996d41db948d~mv2.jpg", 
 const HERO_VIDEO = "https://video.wixstatic.com/video/f26660_3c15c9f1eb17403e9ad83b5080d3f6f3/1080p/mp4/file.mp4";
 
 export function HomePage() {
-  const { openTickets, openVendor } = useUI();
+  const { openVendor } = useUI();
   const countdown = useCountdown("2026-09-26T10:00:00-05:00");
   const isMobile = useIsMobile();
   const featured = getShowById(featuredShowId);
@@ -47,14 +47,13 @@ export function HomePage() {
           </p>
 
           <div className="flex flex-wrap gap-3 mt-[clamp(22px,3vw,34px)]">
-            <button
-              type="button"
-              onClick={() => openTickets()}
+            <Link
+              to="/shows"
               className="inline-flex items-center justify-center gap-2.5 h-[58px] px-[clamp(22px,3vw,38px)] bg-ember text-white border-0 cursor-pointer font-cond text-[17px] font-bold tracking-[.18em] uppercase transition-[background,transform,box-shadow] hover:bg-[#FF5A33] hover:-translate-y-0.5"
               style={{ clipPath: "polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px)", boxShadow: "0 18px 40px -18px rgba(255,61,20,.9)" }}
             >
-              Get Tickets
-            </button>
+              View All Dates
+            </Link>
             <button
               type="button"
               onClick={() => openVendor()}
@@ -93,7 +92,7 @@ export function HomePage() {
       <CategoryMarquee />
 
       {/* UP NEXT */}
-      <section data-reveal="" aria-labelledby="upnext" className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,120px)]">
+      <Reveal as="section" aria-labelledby="upnext" className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,120px)]">
         <div className="flex items-baseline justify-between gap-5 flex-wrap mb-[clamp(22px,3vw,38px)]">
           <h2 id="upnext" className="m-0 font-display text-[clamp(34px,5.4vw,84px)] leading-[.9] tracking-[-.01em] uppercase">
             Up Next
@@ -135,27 +134,19 @@ export function HomePage() {
             </div>
 
             <div className="flex flex-wrap gap-2.5 mt-[clamp(20px,2.6vw,30px)]">
-              <button type="button" onClick={() => openTickets(featured.id)} className="flex-1 basis-[180px] h-[54px] bg-ember text-white border-0 cursor-pointer font-cond text-base font-bold tracking-[.18em] uppercase hover:bg-[#FF5A33]">
-                Get Tickets
-              </button>
-              <Link to={`/shows/${featured.id}`} className="flex-1 basis-[180px] h-[54px] flex items-center justify-center bg-transparent text-white border border-white/30 cursor-pointer font-cond text-base font-bold tracking-[.18em] uppercase hover:border-white hover:bg-white/[.06]">
+              <Link to={`/shows/${featured.id}`} className="flex-1 basis-[180px] h-[54px] flex items-center justify-center bg-ember text-white border-0 cursor-pointer font-cond text-base font-bold tracking-[.18em] uppercase hover:bg-[#FF5A33]">
                 View Show Details
               </Link>
+              <button type="button" onClick={() => openVendor(featured.id)} className="flex-1 basis-[180px] h-[54px] bg-transparent text-white border border-white/30 cursor-pointer font-cond text-base font-bold tracking-[.18em] uppercase hover:border-white hover:bg-white/[.06]">
+                Reserve a Table
+              </button>
             </div>
-            <button
-              type="button"
-              onClick={() => openVendor(featured.id)}
-              className="self-start mt-4 bg-transparent border-0 p-0 cursor-pointer font-cond text-sm font-semibold tracking-[.2em] uppercase border-b"
-              style={{ color: "#F2C14E", borderColor: "rgba(242,193,78,.4)" }}
-            >
-              Vending this show? Reserve a table →
-            </button>
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* ONE SHOW EVERY KIND OF COLLECTOR */}
-      <section data-reveal="" aria-labelledby="find" className="border-t border-white/10 bg-[#0C0C0E]">
+      <Reveal as="section" aria-labelledby="find" className="border-t border-white/10 bg-[#0C0C0E]">
         <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,120px)]">
           <h2 id="find" className="m-0 mb-[clamp(24px,3vw,44px)] font-display text-[clamp(34px,6.4vw,104px)] leading-[.86] tracking-[-.015em] uppercase">
             One show.
@@ -181,10 +172,10 @@ export function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* MORE THAN A CARD SHOW */}
-      <section data-reveal="" aria-labelledby="more" className="border-t border-white/10">
+      <Reveal as="section" aria-labelledby="more" className="border-t border-white/10">
         <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,120px)] grid gap-[clamp(24px,4vw,64px)] items-center" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))" }}>
           <div>
             <span className="font-cond text-xs tracking-[.3em] uppercase text-ember">The Experience</span>
@@ -211,10 +202,10 @@ export function HomePage() {
             <img src={wixImage("f26660_71f41ba129f145199ea15e980a28e895~mv2.jpg", 1000, 1250)} alt="Show floor at Homefield Olathe" loading="lazy" className="w-full aspect-[3/4] object-cover border border-white/[.12] mt-[clamp(20px,4vw,54px)]" />
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* 2026 TOUR DATES */}
-      <section data-reveal="" aria-labelledby="upcoming" className="border-t border-white/10 bg-[#0C0C0E]">
+      <Reveal as="section" aria-labelledby="upcoming" className="border-t border-white/10 bg-[#0C0C0E]">
         <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,120px)]">
           <div className="flex items-baseline justify-between gap-5 flex-wrap mb-[clamp(22px,3vw,38px)]">
             <h2 id="upcoming" className="m-0 font-display text-[clamp(34px,5.4vw,84px)] leading-[.9] uppercase">2026 Tour Dates</h2>
@@ -239,18 +230,18 @@ export function HomePage() {
                   <Link to={`/shows/${s.id}`} className="h-11 px-[18px] flex items-center bg-transparent text-white border border-white/25 font-cond text-sm font-bold tracking-[.16em] uppercase hover:border-white">
                     Details
                   </Link>
-                  <button type="button" onClick={() => openTickets(s.id)} className="h-11 px-[18px] bg-ember text-white border-0 cursor-pointer font-cond text-sm font-bold tracking-[.16em] uppercase hover:bg-[#FF5A33]">
-                    Tickets
+                  <button type="button" onClick={() => openVendor(s.id)} className="h-11 px-[18px] bg-ember text-white border-0 cursor-pointer font-cond text-sm font-bold tracking-[.16em] uppercase hover:bg-[#FF5A33]">
+                    Tables
                   </button>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* VENDOR BAND */}
-      <section data-reveal="" aria-labelledby="vendband" className="relative border-t border-white/10 overflow-hidden">
+      <Reveal as="section" aria-labelledby="vendband" className="relative border-t border-white/10 overflow-hidden">
         <img src={wixImage("f26660_b0a6b1e16abd4ed0808ae4e8ab26eb72~mv2.jpg", 1600, 900)} alt="Vendor tables lined up at the Johnson County Card Show" loading="lazy" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "grayscale(.5)" }} />
         <div aria-hidden="true" className="absolute inset-0" style={{ background: "linear-gradient(90deg,rgba(10,10,11,.96) 0%,rgba(10,10,11,.82) 45%,rgba(255,61,20,.35) 100%)" }} />
         <div className="relative max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,120px)]">
@@ -272,10 +263,10 @@ export function HomePage() {
             </Link>
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* OUR STORY */}
-      <section data-reveal="" aria-labelledby="story" className="border-t border-white/10">
+      <Reveal as="section" aria-labelledby="story" className="border-t border-white/10">
         <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,120px)] grid gap-[clamp(24px,4vw,64px)]" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))" }}>
           <div>
             <span className="font-cond text-xs tracking-[.3em] uppercase text-ember">Our Story</span>
@@ -306,10 +297,10 @@ export function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* THE SHOW media */}
-      <section data-reveal="" aria-labelledby="media" className="border-t border-white/10 bg-[#0C0C0E]">
+      <Reveal as="section" aria-labelledby="media" className="border-t border-white/10 bg-[#0C0C0E]">
         <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,120px)]">
           <div className="flex items-baseline justify-between gap-[18px] flex-wrap mb-[26px]">
             <h2 id="media" className="m-0 font-display text-[clamp(34px,5.4vw,84px)] leading-[.9] uppercase">The Show</h2>
@@ -328,10 +319,10 @@ export function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* VENUE */}
-      <section data-reveal="" aria-labelledby="venueband" className="border-t border-white/10">
+      <Reveal as="section" aria-labelledby="venueband" className="border-t border-white/10">
         <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,120px)] grid gap-[clamp(24px,4vw,64px)] items-center" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))" }}>
           <div>
             <span className="font-cond text-xs tracking-[.3em] uppercase text-ember">The Venue</span>
@@ -354,10 +345,10 @@ export function HomePage() {
           </div>
           <img src={wixImage("f26660_cb06ad68bb964353a0425108c18c74a1~mv2.jpg", 1400, 1050)} alt="Show floor inside Homefield Olathe Training Center" loading="lazy" className="w-full aspect-[4/3] object-cover border border-white/[.12]" />
         </div>
-      </section>
+      </Reveal>
 
       {/* SOCIAL */}
-      <section data-reveal="" aria-labelledby="social" className="border-t border-white/10 bg-[#0C0C0E]">
+      <Reveal as="section" aria-labelledby="social" className="border-t border-white/10 bg-[#0C0C0E]">
         <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,110px)]">
           <div className="grid gap-[clamp(24px,4vw,54px)] items-end mb-7" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))" }}>
             <div>
@@ -382,7 +373,7 @@ export function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </Reveal>
     </div>
   );
 }

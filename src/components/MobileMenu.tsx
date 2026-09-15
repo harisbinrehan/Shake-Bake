@@ -4,7 +4,7 @@ import { useUI } from "../context/UIContext";
 import { venue } from "../data/venue";
 
 export function MobileMenu() {
-  const { menuOpen, closeMenu, openTickets, openVendor } = useUI();
+  const { menuOpen, closeMenu, openVendor } = useUI();
   const navigate = useNavigate();
 
   if (!menuOpen) return null;
@@ -42,15 +42,8 @@ export function MobileMenu() {
         <div className="flex flex-col gap-2.5 mt-[26px]">
           <button
             type="button"
-            onClick={() => openTickets()}
-            className="h-14 bg-ember text-white border-0 cursor-pointer font-cond text-[17px] font-bold tracking-[.18em] uppercase"
-          >
-            Get Tickets
-          </button>
-          <button
-            type="button"
             onClick={() => openVendor()}
-            className="h-14 bg-transparent text-white border border-white/30 cursor-pointer font-cond text-[17px] font-bold tracking-[.18em] uppercase"
+            className="h-14 bg-ember text-white border-0 cursor-pointer font-cond text-[17px] font-bold tracking-[.18em] uppercase"
           >
             Become a Vendor
           </button>

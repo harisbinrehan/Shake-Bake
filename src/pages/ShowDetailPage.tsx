@@ -9,7 +9,7 @@ import { useUI } from "../context/UIContext";
 export function ShowDetailPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const { openTickets, openVendor, openLightbox } = useUI();
+  const { openVendor, openLightbox } = useUI();
   const show = getShowById(id);
   const related = shows.filter((s) => s.id !== show.id).slice(0, 3);
   const galleryPreview = galleryIds.slice(6, 12);
@@ -65,12 +65,17 @@ export function ShowDetailPage() {
           </div>
         </div>
         <div className="flex flex-wrap gap-2.5 mt-5">
-          <button type="button" onClick={() => openTickets(show.id)} className="flex-1 basis-[220px] h-[58px] bg-ember text-white border-0 cursor-pointer font-cond text-[17px] font-bold tracking-[.18em] uppercase hover:bg-[#FF5A33]">
-            Get Tickets
-          </button>
-          <button type="button" onClick={() => openVendor(show.id)} className="flex-1 basis-[220px] h-[58px] bg-transparent text-white border border-white/30 cursor-pointer font-cond text-[17px] font-bold tracking-[.18em] uppercase hover:border-white hover:bg-white/[.06]">
+          <button type="button" onClick={() => openVendor(show.id)} className="flex-1 basis-[220px] h-[58px] bg-ember text-white border-0 cursor-pointer font-cond text-[17px] font-bold tracking-[.18em] uppercase hover:bg-[#FF5A33]">
             Become a Vendor
           </button>
+          <a
+            href={show.tables}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 basis-[220px] h-[58px] flex items-center justify-center bg-transparent text-white border border-white/30 cursor-pointer font-cond text-[17px] font-bold tracking-[.18em] uppercase hover:border-white hover:bg-white/[.06]"
+          >
+            Official Table Form
+          </a>
         </div>
       </section>
 
@@ -107,8 +112,10 @@ export function ShowDetailPage() {
             </a>{" "}
             or contact us.
           </p>
-          <h3 className="mt-[30px] font-cond text-[13px] tracking-[.28em] uppercase text-muted">Tickets</h3>
-          <p className="mt-3 text-base leading-[1.75] text-body">Ticket information coming soon.</p>
+          <h3 className="mt-[30px] font-cond text-[13px] tracking-[.28em] uppercase text-muted">Admission</h3>
+          <p className="mt-3 text-base leading-[1.75] text-body">
+            No advance ticket required — just walk in during show hours listed above.
+          </p>
         </div>
         <div>
           <div className="grid grid-cols-2 gap-2">

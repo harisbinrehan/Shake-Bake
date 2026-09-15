@@ -1,12 +1,10 @@
 import { FadedHero } from "../components/heroes";
 import { Reveal } from "../components/Reveal";
-import { useUI } from "../context/UIContext";
 import { useNavigate } from "react-router-dom";
 import { categoryDefs } from "../data/categories";
 import { wixImage } from "../data/media";
 
 export function ExperiencePage() {
-  const { openTickets } = useUI();
   const navigate = useNavigate();
 
   return (
@@ -81,8 +79,8 @@ export function ExperiencePage() {
               Beginners feel welcome, seasoned collectors find value, and vendors have a place to thrive.
             </p>
             <div className="flex flex-wrap gap-2.5 mt-[26px]">
-              <button type="button" onClick={() => openTickets()} className="h-[54px] px-7 bg-ember text-white border-0 cursor-pointer font-cond text-base font-bold tracking-[.18em] uppercase hover:bg-[#FF5A33]">
-                Get Tickets
+              <button type="button" onClick={() => navigate("/shows")} className="h-[54px] px-7 bg-ember text-white border-0 cursor-pointer font-cond text-base font-bold tracking-[.18em] uppercase hover:bg-[#FF5A33]">
+                View Upcoming Shows
               </button>
               <button type="button" onClick={() => navigate("/videos")} className="h-[54px] px-7 bg-transparent text-white border border-white/30 cursor-pointer font-cond text-base font-bold tracking-[.18em] uppercase hover:border-white">
                 Watch the show

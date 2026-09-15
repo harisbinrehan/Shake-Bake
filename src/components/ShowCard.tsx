@@ -4,7 +4,7 @@ import { useUI } from "../context/UIContext";
 import { showImage, type Show } from "../data/shows";
 
 export function ShowCard({ show }: { show: Show }) {
-  const { openTickets, openVendor } = useUI();
+  const { openVendor } = useUI();
 
   return (
     <Reveal
@@ -35,17 +35,10 @@ export function ShowCard({ show }: { show: Show }) {
         <div className="flex flex-wrap gap-2">
           <button
             type="button"
-            onClick={() => openTickets(show.id)}
+            onClick={() => openVendor(show.id)}
             className="flex-1 basis-[130px] h-[46px] bg-ember text-white border-0 cursor-pointer font-cond text-sm font-bold tracking-[.16em] uppercase hover:bg-[#FF5A33]"
           >
-            Tickets
-          </button>
-          <button
-            type="button"
-            onClick={() => openVendor(show.id)}
-            className="flex-1 basis-[130px] h-[46px] bg-transparent text-white border border-white/[.26] cursor-pointer font-cond text-sm font-bold tracking-[.16em] uppercase hover:border-white"
-          >
-            Vendor Table
+            Reserve a Table
           </button>
           <Link
             to={`/shows/${show.id}`}

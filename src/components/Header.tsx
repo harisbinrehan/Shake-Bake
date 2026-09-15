@@ -8,7 +8,7 @@ const LOGO = wixImage("03c59c_2b0d31c5ada746598c19a50709c85e64~mv2.jpeg", 160, 1
 
 export function Header() {
   const [compact, setCompact] = useState(false);
-  const { toggleMenu, openTickets } = useUI();
+  const { toggleMenu, openVendor } = useUI();
   const location = useLocation();
   const navigate = useNavigate();
   const headerRef = useRef<HTMLElement | null>(null);
@@ -67,11 +67,11 @@ export function Header() {
       <div className="flex items-center gap-2.5">
         <button
           type="button"
-          onClick={() => openTickets()}
-          className="inline-flex items-center gap-2 bg-ember text-white h-[46px] px-[clamp(14px,2vw,24px)] font-cond text-[15px] font-bold tracking-[.16em] uppercase cursor-pointer transition-[background,transform] hover:bg-[#FF5A33] hover:-translate-y-px"
+          onClick={() => openVendor()}
+          className="inline-flex items-center gap-2 bg-ember text-white h-[46px] px-[clamp(14px,2vw,24px)] font-cond text-[13px] sm:text-[15px] font-bold tracking-[.14em] sm:tracking-[.16em] uppercase whitespace-nowrap cursor-pointer transition-[background,transform] hover:bg-[#FF5A33] hover:-translate-y-px"
           style={{ clipPath: "polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px)" }}
         >
-          Get Tickets
+          Become a Vendor
         </button>
         <button
           type="button"

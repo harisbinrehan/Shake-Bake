@@ -9,7 +9,7 @@ export function ShowsPage() {
       <FadedHero
         kicker="Homefield Olathe · Olathe, KS"
         title="2026 Tour Dates"
-        description="Every date on the Johnson County Card Show calendar. Grab tickets, or reserve a table and set up on the floor."
+        description="Every date on the Johnson County Card Show calendar. Walk in during show hours, or reserve a table and set up on the floor."
         image={wixImage("f26660_0e21358cc6464517b8ae996d41db948d~mv2.jpg", 1600, 900)}
         opacity={0.35}
         grayscale={0.7}

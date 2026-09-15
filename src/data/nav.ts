@@ -6,7 +6,6 @@ export interface NavItem {
 /** Primary desktop nav + full-screen mobile menu order. */
 export const primaryNav: NavItem[] = [
   { label: "Shows", path: "/shows" },
-  { label: "Tickets", path: "/tickets" },
   { label: "Vendors", path: "/vendors" },
   { label: "Experience", path: "/experience" },
   { label: "Venue", path: "/venue" },

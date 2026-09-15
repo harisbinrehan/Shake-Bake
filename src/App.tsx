@@ -3,7 +3,6 @@ import { Layout } from "./components/Layout";
 import { HomePage } from "./pages/HomePage";
 import { ShowsPage } from "./pages/ShowsPage";
 import { ShowDetailPage } from "./pages/ShowDetailPage";
-import { TicketsPage } from "./pages/TicketsPage";
 import { VendorsPage } from "./pages/VendorsPage";
 import { ExperiencePage } from "./pages/ExperiencePage";
 import { VenuePage } from "./pages/VenuePage";
@@ -22,7 +21,6 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/shows" element={<ShowsPage />} />
         <Route path="/shows/:id" element={<ShowDetailPage />} />
-        <Route path="/tickets" element={<TicketsPage />} />
         <Route path="/vendors" element={<VendorsPage />} />
         <Route path="/experience" element={<ExperiencePage />} />
         <Route path="/venue" element={<VenuePage />} />
