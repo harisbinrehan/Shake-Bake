@@ -23,7 +23,7 @@ export function VenuePage() {
         minHeight="min(76vh,720px)"
       />
 
-      <section className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(40px,6vw,90px)] grid gap-[clamp(24px,4vw,64px)]" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))" }}>
+      <section className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(40px,6vw,90px)] grid gap-[clamp(24px,4vw,64px)]" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(min(300px,100%),1fr))" }}>
         <div>
           <p className="m-0 font-cond text-[clamp(19px,2.2vw,28px)] leading-[1.35] tracking-[.02em] uppercase text-white">
             Get ready, Johnson County — where sports passion meets collector culture in one electrifying destination.

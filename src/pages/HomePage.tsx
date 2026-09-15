@@ -102,7 +102,7 @@ export function HomePage() {
           </Link>
         </div>
 
-        <div className="grid gap-px bg-white/[.12] border border-white/[.12]" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))" }}>
+        <div className="grid gap-px bg-white/[.12] border border-white/[.12]" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(min(320px,100%),1fr))" }}>
           <div className="relative bg-[#0E0E10] min-h-[clamp(300px,38vw,520px)] overflow-hidden">
             <img
               src={showImage(featured, 1100, 1400)}
@@ -176,7 +176,7 @@ export function HomePage() {
 
       {/* MORE THAN A CARD SHOW */}
       <Reveal as="section" aria-labelledby="more" className="border-t border-white/10">
-        <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,120px)] grid gap-[clamp(24px,4vw,64px)] items-center" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))" }}>
+        <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,120px)] grid gap-[clamp(24px,4vw,64px)] items-center" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(min(300px,100%),1fr))" }}>
           <div>
             <span className="font-cond text-xs tracking-[.3em] uppercase text-ember">The Experience</span>
             <h2 id="more" className="mt-3.5 font-display text-[clamp(34px,5.4vw,86px)] leading-[.86] tracking-[-.015em] uppercase">
@@ -267,7 +267,7 @@ export function HomePage() {
 
       {/* OUR STORY */}
       <Reveal as="section" aria-labelledby="story" className="border-t border-white/10">
-        <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,120px)] grid gap-[clamp(24px,4vw,64px)]" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))" }}>
+        <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,120px)] grid gap-[clamp(24px,4vw,64px)]" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(min(300px,100%),1fr))" }}>
           <div>
             <span className="font-cond text-xs tracking-[.3em] uppercase text-ember">Our Story</span>
             <h2 id="story" className="mt-3.5 font-display text-[clamp(32px,4.6vw,72px)] leading-[.88] uppercase">
@@ -323,7 +323,7 @@ export function HomePage() {
 
       {/* VENUE */}
       <Reveal as="section" aria-labelledby="venueband" className="border-t border-white/10">
-        <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,120px)] grid gap-[clamp(24px,4vw,64px)] items-center" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))" }}>
+        <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,120px)] grid gap-[clamp(24px,4vw,64px)] items-center" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(min(300px,100%),1fr))" }}>
           <div>
             <span className="font-cond text-xs tracking-[.3em] uppercase text-ember">The Venue</span>
             <h2 id="venueband" className="mt-3.5 font-display text-[clamp(34px,5.4vw,84px)] leading-[.88] uppercase">

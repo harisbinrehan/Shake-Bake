@@ -15,7 +15,7 @@ export function ShowsPage() {
         grayscale={0.7}
         gradient="linear-gradient(180deg,rgba(10,10,11,.9),rgba(10,10,11,.98))"
       />
-      <section className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(40px,6vw,90px)] grid gap-[clamp(14px,2vw,24px)]" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))" }}>
+      <section className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(40px,6vw,90px)] grid gap-[clamp(14px,2vw,24px)]" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(min(320px,100%),1fr))" }}>
         {shows.map((s) => (
           <ShowCard key={s.id} show={s} />
         ))}

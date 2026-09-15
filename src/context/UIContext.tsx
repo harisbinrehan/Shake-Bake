@@ -64,6 +64,16 @@ export function UIProvider({ children }: { children: ReactNode }) {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
+  const scrollLocked = Boolean(modal) || menuOpen || Boolean(lightbox);
+  useEffect(() => {
+    if (!scrollLocked) return;
+    const { overflow } = document.body.style;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = overflow;
+    };
+  }, [scrollLocked]);
+
   const value = useMemo<UIContextValue>(
     () => ({
       modal,

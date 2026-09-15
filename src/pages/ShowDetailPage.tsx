@@ -79,7 +79,7 @@ export function ShowDetailPage() {
         </div>
       </section>
 
-      <section className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] pb-[clamp(40px,6vw,90px)] grid gap-[clamp(24px,4vw,60px)]" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))" }}>
+      <section className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] pb-[clamp(40px,6vw,90px)] grid gap-[clamp(24px,4vw,60px)]" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(min(300px,100%),1fr))" }}>
         <div>
           <h2 className="m-0 font-display text-[clamp(26px,3vw,44px)] uppercase">About the show</h2>
           <p className="mt-4 text-base leading-[1.75] text-body">{show.blurb}</p>

@@ -23,7 +23,7 @@ export function ExperiencePage() {
         gradient="linear-gradient(180deg,rgba(10,10,11,.88),rgba(10,10,11,.98))"
       />
 
-      <section className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(40px,6vw,90px)] grid gap-[clamp(24px,4vw,64px)] items-center" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))" }}>
+      <section className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(40px,6vw,90px)] grid gap-[clamp(24px,4vw,64px)] items-center" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(min(300px,100%),1fr))" }}>
         <div>
           <h2 className="m-0 font-display text-[clamp(26px,3vw,44px)] uppercase">What to expect</h2>
           <p className="mt-4 text-base leading-[1.75] text-body">
@@ -66,7 +66,7 @@ export function ExperiencePage() {
       </Reveal>
 
       <Reveal as="section" className="border-t border-white/10">
-        <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(44px,6vw,100px)] grid gap-[clamp(24px,4vw,64px)] items-center" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))" }}>
+        <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(44px,6vw,100px)] grid gap-[clamp(24px,4vw,64px)] items-center" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(min(300px,100%),1fr))" }}>
           <img src={wixImage("f26660_c58af02306f3421aabe450ab62c40fde~mv2.jpg", 1200, 900)} alt="Collectors trading at the show" loading="lazy" className="w-full aspect-[4/3] object-cover border border-white/[.12]" />
           <div>
             <h2 className="m-0 font-display text-[clamp(30px,4vw,60px)] leading-[.9] uppercase">Community</h2>
