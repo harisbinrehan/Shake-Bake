@@ -78,22 +78,22 @@ export function HomePage() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.65 }}
-            className="flex flex-wrap gap-3 mt-[clamp(22px,3vw,34px)]"
+            className="flex flex-nowrap gap-2 sm:gap-3 mt-[clamp(22px,3vw,34px)]"
           >
-            <Magnetic>
+            <Magnetic className="flex-1 min-w-0">
               <Link
                 to="/shows"
-                className="inline-flex items-center justify-center gap-2.5 h-[58px] px-[clamp(22px,3vw,38px)] bg-ember text-white border-0 cursor-pointer font-cond text-[17px] font-bold tracking-[.08em] uppercase transition-[background,transform,box-shadow] hover:bg-[#FF5A33] hover:-translate-y-0.5"
+                className="flex w-full items-center justify-center gap-2 h-[52px] sm:h-[58px] px-[clamp(10px,3vw,38px)] bg-ember text-white border-0 cursor-pointer font-cond text-[clamp(12px,3.6vw,17px)] font-bold tracking-[.06em] uppercase whitespace-nowrap transition-[background,transform,box-shadow] hover:bg-[#FF5A33] hover:-translate-y-0.5"
                 style={{ clipPath: "polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px)", boxShadow: "0 18px 40px -18px rgba(255,61,20,.9)" }}
               >
                 View All Dates
               </Link>
             </Magnetic>
-            <Magnetic>
+            <Magnetic className="flex-1 min-w-0">
               <button
                 type="button"
                 onClick={() => openVendor()}
-                className="inline-flex items-center justify-center h-[58px] px-[clamp(22px,3vw,38px)] bg-white/[.07] text-white border border-white/[.34] backdrop-blur-md cursor-pointer font-cond text-[17px] font-bold tracking-[.08em] uppercase transition-[background,border-color,transform] hover:bg-white/[.14] hover:border-white hover:-translate-y-0.5"
+                className="flex w-full items-center justify-center h-[52px] sm:h-[58px] px-[clamp(10px,3vw,38px)] bg-white/[.07] text-white border border-white/[.34] backdrop-blur-md cursor-pointer font-cond text-[clamp(12px,3.6vw,17px)] font-bold tracking-[.06em] uppercase whitespace-nowrap transition-[background,border-color,transform] hover:bg-white/[.14] hover:border-white hover:-translate-y-0.5"
               >
                 Become a Vendor
               </button>
