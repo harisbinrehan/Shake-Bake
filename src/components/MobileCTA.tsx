@@ -18,13 +18,13 @@ export function MobileCTA() {
         <button
           type="button"
           onClick={() => openVendor()}
-          className="h-[50px] px-4 bg-transparent text-white border border-white/30 cursor-pointer font-cond text-sm font-bold tracking-[.14em] uppercase whitespace-nowrap"
+          className="h-[50px] px-4 bg-transparent text-white border border-white/30 cursor-pointer font-cond text-sm font-bold tracking-[.07em] uppercase whitespace-nowrap"
         >
           Vendor
         </button>
         <Link
           to="/shows"
-          className="h-[50px] px-5 flex items-center bg-ember text-white border-0 cursor-pointer font-cond text-base font-bold tracking-[.16em] uppercase whitespace-nowrap"
+          className="h-[50px] px-5 flex items-center bg-ember text-white border-0 cursor-pointer font-cond text-base font-bold tracking-[.08em] uppercase whitespace-nowrap"
         >
           View Shows
         </Link>

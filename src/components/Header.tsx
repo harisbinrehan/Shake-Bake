@@ -6,7 +6,7 @@ import LOGO from "../assets/logo.png";
 
 export function Header() {
   const [compact, setCompact] = useState(false);
-  const { toggleMenu, openVendor } = useUI();
+  const { toggleMenu } = useUI();
   const location = useLocation();
   const navigate = useNavigate();
   const headerRef = useRef<HTMLElement | null>(null);
@@ -47,7 +47,7 @@ export function Header() {
             <Link
               key={n.path}
               to={n.path}
-              className="group py-1.5 font-cond text-[15px] font-semibold tracking-[.18em] uppercase transition-colors border-b-2"
+              className="group py-1.5 font-cond text-[15px] font-medium tracking-[.07em] uppercase transition-colors border-b-2"
               style={{
                 color: active ? "#FFFFFF" : "#A1A1A6",
                 borderColor: active ? "#FF3D14" : "rgba(255,255,255,0)",
@@ -60,14 +60,6 @@ export function Header() {
       </nav>
 
       <div className="flex items-center gap-2.5">
-        <button
-          type="button"
-          onClick={() => openVendor()}
-          className="inline-flex items-center gap-2 bg-ember text-white h-[46px] px-[clamp(14px,2vw,24px)] font-cond text-[13px] sm:text-[15px] font-bold tracking-[.14em] sm:tracking-[.16em] uppercase whitespace-nowrap cursor-pointer transition-[background,transform] hover:bg-[#FF5A33] hover:-translate-y-px"
-          style={{ clipPath: "polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px)" }}
-        >
-          Become a Vendor
-        </button>
         <button
           type="button"
           onClick={toggleMenu}

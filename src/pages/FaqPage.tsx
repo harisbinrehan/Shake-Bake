@@ -48,7 +48,7 @@ export function FaqPage() {
           <button
             type="button"
             onClick={() => navigate("/contact")}
-            className="h-[52px] px-7 bg-ember text-white border-0 cursor-pointer font-cond text-base font-bold tracking-[.18em] uppercase hover:bg-[#FF5A33]"
+            className="h-[52px] px-7 bg-ember text-white border-0 cursor-pointer font-cond text-base font-bold tracking-[.08em] uppercase hover:bg-[#FF5A33]"
           >
             Contact us
           </button>

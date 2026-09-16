@@ -36,13 +36,13 @@ export function ShowCard({ show }: { show: Show }) {
           <button
             type="button"
             onClick={() => openVendor(show.id)}
-            className="flex-1 basis-[130px] h-[46px] bg-ember text-white border-0 cursor-pointer font-cond text-sm font-bold tracking-[.16em] uppercase hover:bg-[#FF5A33]"
+            className="flex-1 basis-[130px] h-[46px] bg-ember text-white border-0 cursor-pointer font-cond text-sm font-bold tracking-[.08em] uppercase hover:bg-[#FF5A33]"
           >
             Reserve a Table
           </button>
           <Link
             to={`/shows/${show.id}`}
-            className="basis-full h-[42px] flex items-center justify-center text-muted font-cond text-[13px] font-semibold tracking-[.2em] uppercase hover:text-white"
+            className="basis-full h-[42px] flex items-center justify-center text-muted font-cond text-[13px] font-medium tracking-[.08em] uppercase hover:text-white"
           >
             View details →
           </Link>

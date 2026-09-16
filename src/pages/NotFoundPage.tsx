@@ -8,7 +8,7 @@ export function NotFoundPage() {
       <p className="mt-5 text-base text-body">That page doesn't exist — head back to the homepage.</p>
       <Link
         to="/"
-        className="inline-block mt-7 h-[54px] leading-[54px] px-8 bg-ember text-white font-cond text-base font-bold tracking-[.18em] uppercase"
+        className="inline-block mt-7 h-[54px] leading-[54px] px-8 bg-ember text-white font-cond text-base font-bold tracking-[.08em] uppercase"
       >
         Back to Home
       </Link>

@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { Reveal } from "../components/Reveal";
+import { Magnetic } from "../components/Magnetic";
 import { CategoryMarquee } from "../components/CategoryMarquee";
 import { useUI } from "../context/UIContext";
 import { useCountdown } from "../hooks/useCountdown";
@@ -12,6 +14,14 @@ import { wixImage } from "../data/media";
 
 const HERO_POSTER = wixImage("f26660_0e21358cc6464517b8ae996d41db948d~mv2.jpg", 1600, 900);
 const HERO_VIDEO = "https://video.wixstatic.com/video/f26660_3c15c9f1eb17403e9ad83b5080d3f6f3/1080p/mp4/file.mp4";
+
+const heroLine = {
+  hidden: { y: "100%" },
+  show: (i: number) => ({
+    y: 0,
+    transition: { duration: 0.8, delay: 0.15 + i * 0.1, ease: [0.16, 1, 0.3, 1] as const },
+  }),
+};
 
 export function HomePage() {
   const { openVendor } = useUI();
@@ -33,35 +43,62 @@ export function HomePage() {
         <div aria-hidden="true" className="absolute inset-0" style={{ background: "radial-gradient(120% 70% at 50% 100%,rgba(255,61,20,.18) 0%,rgba(255,61,20,0) 60%)" }} />
 
         <div className="relative z-[2] w-full max-w-[1440px] mx-auto pt-[110px] px-[clamp(18px,4vw,56px)] pb-[clamp(28px,4vw,54px)]">
-          <div className="inline-flex items-center gap-2.5 mb-[clamp(14px,2vw,22px)] py-[7px] px-3.5 border border-white/[.22] backdrop-blur-md" style={{ background: "rgba(10,10,11,.5)" }}>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="inline-flex items-center gap-2.5 mb-[clamp(14px,2vw,22px)] py-[7px] px-3.5 border border-white/[.22] backdrop-blur-md"
+            style={{ background: "rgba(10,10,11,.5)" }}
+          >
             <span className="w-[7px] h-[7px] bg-ember rounded-full animate-pulse2" />
             <span className="font-cond text-xs tracking-[.26em] uppercase">Hosted by Shake &amp; Bake · Olathe, KS</span>
-          </div>
+          </motion.div>
           <h1 className="m-0 font-display text-[clamp(46px,10.2vw,172px)] leading-[.92] tracking-[-.015em] uppercase [text-wrap:balance]">
-            Johnson County
-            <br />
-            <span className="text-ember">Card Show</span>
+            <span className="block overflow-hidden">
+              <motion.span custom={0} initial="hidden" animate="show" variants={heroLine} className="block">
+                Johnson County
+              </motion.span>
+            </span>
+            <span className="block overflow-hidden">
+              <motion.span custom={1} initial="hidden" animate="show" variants={heroLine} className="block text-ember">
+                Card Show
+              </motion.span>
+            </span>
           </h1>
-          <p className="mt-[clamp(16px,2vw,24px)] max-w-[640px] text-[clamp(15px,1.5vw,20px)] leading-[1.55] text-offwhite [text-wrap:pretty]">
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.55 }}
+            className="mt-[clamp(16px,2vw,24px)] max-w-[640px] text-[clamp(15px,1.5vw,20px)] leading-[1.55] text-offwhite [text-wrap:pretty]"
+          >
             Where collectors, vendors, and hobby enthusiasts come together.
-          </p>
+          </motion.p>
 
-          <div className="flex flex-wrap gap-3 mt-[clamp(22px,3vw,34px)]">
-            <Link
-              to="/shows"
-              className="inline-flex items-center justify-center gap-2.5 h-[58px] px-[clamp(22px,3vw,38px)] bg-ember text-white border-0 cursor-pointer font-cond text-[17px] font-bold tracking-[.18em] uppercase transition-[background,transform,box-shadow] hover:bg-[#FF5A33] hover:-translate-y-0.5"
-              style={{ clipPath: "polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px)", boxShadow: "0 18px 40px -18px rgba(255,61,20,.9)" }}
-            >
-              View All Dates
-            </Link>
-            <button
-              type="button"
-              onClick={() => openVendor()}
-              className="inline-flex items-center justify-center h-[58px] px-[clamp(22px,3vw,38px)] bg-white/[.07] text-white border border-white/[.34] backdrop-blur-md cursor-pointer font-cond text-[17px] font-bold tracking-[.18em] uppercase transition-[background,border-color,transform] hover:bg-white/[.14] hover:border-white hover:-translate-y-0.5"
-            >
-              Become a Vendor
-            </button>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.65 }}
+            className="flex flex-wrap gap-3 mt-[clamp(22px,3vw,34px)]"
+          >
+            <Magnetic>
+              <Link
+                to="/shows"
+                className="inline-flex items-center justify-center gap-2.5 h-[58px] px-[clamp(22px,3vw,38px)] bg-ember text-white border-0 cursor-pointer font-cond text-[17px] font-bold tracking-[.08em] uppercase transition-[background,transform,box-shadow] hover:bg-[#FF5A33] hover:-translate-y-0.5"
+                style={{ clipPath: "polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px)", boxShadow: "0 18px 40px -18px rgba(255,61,20,.9)" }}
+              >
+                View All Dates
+              </Link>
+            </Magnetic>
+            <Magnetic>
+              <button
+                type="button"
+                onClick={() => openVendor()}
+                className="inline-flex items-center justify-center h-[58px] px-[clamp(22px,3vw,38px)] bg-white/[.07] text-white border border-white/[.34] backdrop-blur-md cursor-pointer font-cond text-[17px] font-bold tracking-[.08em] uppercase transition-[background,border-color,transform] hover:bg-white/[.14] hover:border-white hover:-translate-y-0.5"
+              >
+                Become a Vendor
+              </button>
+            </Magnetic>
+          </motion.div>
         </div>
 
         <div className="relative z-[2] border-t border-white/[.14] backdrop-blur-md" style={{ background: "rgba(10,10,11,.6)" }}>
@@ -97,7 +134,7 @@ export function HomePage() {
           <h2 id="upnext" className="m-0 font-display text-[clamp(34px,5.4vw,84px)] leading-[.96] tracking-[-.01em] uppercase">
             Up Next
           </h2>
-          <Link to="/shows" className="font-cond text-sm font-semibold tracking-[.22em] uppercase text-muted border-b border-white/25 hover:text-white hover:border-ember transition-colors">
+          <Link to="/shows" className="font-cond text-sm font-medium tracking-[.08em] uppercase text-muted border-b border-white/25 hover:text-white hover:border-ember transition-colors">
             View all 2026 dates
           </Link>
         </div>
@@ -134,10 +171,10 @@ export function HomePage() {
             </div>
 
             <div className="flex flex-wrap gap-2.5 mt-[clamp(20px,2.6vw,30px)]">
-              <Link to={`/shows/${featured.id}`} className="flex-1 basis-[180px] h-[54px] flex items-center justify-center bg-ember text-white border-0 cursor-pointer font-cond text-base font-bold tracking-[.18em] uppercase hover:bg-[#FF5A33]">
+              <Link to={`/shows/${featured.id}`} className="flex-1 basis-[180px] h-[54px] flex items-center justify-center bg-ember text-white border-0 cursor-pointer font-cond text-base font-bold tracking-[.08em] uppercase hover:bg-[#FF5A33]">
                 View Show Details
               </Link>
-              <button type="button" onClick={() => openVendor(featured.id)} className="flex-1 basis-[180px] h-[54px] bg-transparent text-white border border-white/30 cursor-pointer font-cond text-base font-bold tracking-[.18em] uppercase hover:border-white hover:bg-white/[.06]">
+              <button type="button" onClick={() => openVendor(featured.id)} className="flex-1 basis-[180px] h-[54px] bg-transparent text-white border border-white/30 cursor-pointer font-cond text-base font-bold tracking-[.08em] uppercase hover:border-white hover:bg-white/[.06]">
                 Reserve a Table
               </button>
             </div>
@@ -193,7 +230,7 @@ export function HomePage() {
               From high-grade cards to unique memorabilia, you'll discover incredible items, meet fellow hobbyists,
               and experience the excitement of the trading card community.
             </p>
-            <Link to="/experience" className="inline-block mt-[26px] h-[52px] leading-[52px] px-[30px] bg-transparent text-white border border-white/30 font-cond text-[15px] font-bold tracking-[.2em] uppercase hover:border-white hover:bg-white/[.06]">
+            <Link to="/experience" className="inline-block mt-[26px] h-[52px] leading-[52px] px-[30px] bg-transparent text-white border border-white/30 font-cond text-[15px] font-bold tracking-[.09em] uppercase hover:border-white hover:bg-white/[.06]">
               Explore the experience
             </Link>
           </div>
@@ -209,7 +246,7 @@ export function HomePage() {
         <div className="max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] py-[clamp(56px,8vw,120px)]">
           <div className="flex items-baseline justify-between gap-5 flex-wrap mb-[clamp(22px,3vw,38px)]">
             <h2 id="upcoming" className="m-0 font-display text-[clamp(34px,5.4vw,84px)] leading-[.96] uppercase">2026 Tour Dates</h2>
-            <Link to="/shows" className="font-cond text-sm font-semibold tracking-[.22em] uppercase text-muted border-b border-white/25 hover:text-white hover:border-ember transition-colors">
+            <Link to="/shows" className="font-cond text-sm font-medium tracking-[.08em] uppercase text-muted border-b border-white/25 hover:text-white hover:border-ember transition-colors">
               All shows
             </Link>
           </div>
@@ -227,10 +264,10 @@ export function HomePage() {
                   Olathe Training Center
                 </p>
                 <div className="flex gap-2 flex-wrap justify-end">
-                  <Link to={`/shows/${s.id}`} className="h-11 px-[18px] flex items-center bg-transparent text-white border border-white/25 font-cond text-sm font-bold tracking-[.16em] uppercase hover:border-white">
+                  <Link to={`/shows/${s.id}`} className="h-11 px-[18px] flex items-center bg-transparent text-white border border-white/25 font-cond text-sm font-bold tracking-[.08em] uppercase hover:border-white">
                     Details
                   </Link>
-                  <button type="button" onClick={() => openVendor(s.id)} className="h-11 px-[18px] bg-ember text-white border-0 cursor-pointer font-cond text-sm font-bold tracking-[.16em] uppercase hover:bg-[#FF5A33]">
+                  <button type="button" onClick={() => openVendor(s.id)} className="h-11 px-[18px] bg-ember text-white border-0 cursor-pointer font-cond text-sm font-bold tracking-[.08em] uppercase hover:bg-[#FF5A33]">
                     Tables
                   </button>
                 </div>
@@ -255,10 +292,10 @@ export function HomePage() {
             high-energy floor at Homefield Olathe.
           </p>
           <div className="flex flex-wrap gap-3 mt-[30px]">
-            <button type="button" onClick={() => openVendor()} className="h-[58px] px-[34px] bg-white text-ink border-0 cursor-pointer font-cond text-[17px] font-bold tracking-[.18em] uppercase transition-[background,transform] hover:bg-gold hover:-translate-y-0.5">
+            <button type="button" onClick={() => openVendor()} className="h-[58px] px-[34px] bg-white text-ink border-0 cursor-pointer font-cond text-[17px] font-bold tracking-[.08em] uppercase transition-[background,transform] hover:bg-gold hover:-translate-y-0.5">
               Reserve Your Table
             </button>
-            <Link to="/vendors" className="h-[58px] flex items-center px-[34px] bg-transparent text-white border border-white/[.36] font-cond text-[17px] font-bold tracking-[.18em] uppercase hover:border-white">
+            <Link to="/vendors" className="h-[58px] flex items-center px-[34px] bg-transparent text-white border border-white/[.36] font-cond text-[17px] font-bold tracking-[.08em] uppercase hover:border-white">
               Vendor Information
             </Link>
           </div>
@@ -282,7 +319,7 @@ export function HomePage() {
               high-energy stage where retailers and hobbyists unite. We specialize in creating a vibrant marketplace
               for sports cards, TCG, and rare memorabilia, ensuring every transaction is rooted in trust and passion.
             </p>
-            <Link to="/about" className="inline-block mt-[26px] h-[52px] leading-[52px] px-[30px] bg-transparent text-white border border-white/30 font-cond text-[15px] font-bold tracking-[.2em] uppercase hover:border-white hover:bg-white/[.06]">
+            <Link to="/about" className="inline-block mt-[26px] h-[52px] leading-[52px] px-[30px] bg-transparent text-white border border-white/30 font-cond text-[15px] font-bold tracking-[.09em] uppercase hover:border-white hover:bg-white/[.06]">
               Read the full story
             </Link>
           </div>
@@ -305,10 +342,10 @@ export function HomePage() {
           <div className="flex items-baseline justify-between gap-[18px] flex-wrap mb-[26px]">
             <h2 id="media" className="m-0 font-display text-[clamp(34px,5.4vw,84px)] leading-[.96] uppercase">The Show</h2>
             <div className="flex gap-[18px]">
-              <Link to="/gallery" className="font-cond text-sm font-semibold tracking-[.22em] uppercase text-muted border-b border-white/25 hover:text-white hover:border-ember transition-colors">
+              <Link to="/gallery" className="font-cond text-sm font-medium tracking-[.08em] uppercase text-muted border-b border-white/25 hover:text-white hover:border-ember transition-colors">
                 Gallery
               </Link>
-              <Link to="/videos" className="font-cond text-sm font-semibold tracking-[.22em] uppercase text-muted border-b border-white/25 hover:text-white hover:border-ember transition-colors">
+              <Link to="/videos" className="font-cond text-sm font-medium tracking-[.08em] uppercase text-muted border-b border-white/25 hover:text-white hover:border-ember transition-colors">
                 Videos
               </Link>
             </div>
@@ -339,7 +376,7 @@ export function HomePage() {
               <br />2115 E. Kansas City Rd.
               <br />Olathe, KS 66061
             </p>
-            <Link to="/venue" className="inline-block mt-[26px] h-[52px] leading-[52px] px-[30px] bg-transparent text-white border border-white/30 font-cond text-[15px] font-bold tracking-[.2em] uppercase hover:border-white hover:bg-white/[.06]">
+            <Link to="/venue" className="inline-block mt-[26px] h-[52px] leading-[52px] px-[30px] bg-transparent text-white border border-white/30 font-cond text-[15px] font-bold tracking-[.09em] uppercase hover:border-white hover:bg-white/[.06]">
               Venue &amp; directions
             </Link>
           </div>
@@ -361,7 +398,7 @@ export function HomePage() {
             </div>
             <div className="flex flex-wrap gap-2">
               {socialDefs.map((s) => (
-                <a key={s.name} href={s.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center h-11 px-4 border border-white/20 text-white font-cond text-sm font-semibold tracking-[.16em] uppercase hover:bg-ember hover:border-ember transition-colors">
+                <a key={s.name} href={s.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center h-11 px-4 border border-white/20 text-white font-cond text-sm font-medium tracking-[.07em] uppercase hover:bg-ember hover:border-ember transition-colors">
                   {s.name}
                 </a>
               ))}

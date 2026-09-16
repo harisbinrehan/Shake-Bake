@@ -47,7 +47,7 @@ export function VendorsPage() {
         <button
           type="button"
           onClick={() => openVendor()}
-          className="mt-[26px] h-[60px] px-9 bg-ember text-white border-0 cursor-pointer font-cond text-lg font-bold tracking-[.18em] uppercase transition-[background,transform] hover:bg-[#FF5A33] hover:-translate-y-0.5"
+          className="mt-[26px] h-[60px] px-9 bg-ember text-white border-0 cursor-pointer font-cond text-lg font-bold tracking-[.08em] uppercase transition-[background,transform] hover:bg-[#FF5A33] hover:-translate-y-0.5"
           style={{ boxShadow: "0 20px 44px -20px rgba(255,61,20,.9)" }}
         >
           Reserve Your Table
@@ -69,7 +69,7 @@ export function VendorsPage() {
         </div>
         <div className="flex flex-wrap gap-2 mt-[22px]">
           {categoryDefs.map((c) => (
-            <span key={c.name} className="py-2.5 px-4 border border-white/[.16] font-cond text-sm font-semibold tracking-[.18em] uppercase text-offwhite">
+            <span key={c.name} className="py-2.5 px-4 border border-white/[.16] font-cond text-sm font-medium tracking-[.07em] uppercase text-offwhite">
               {c.name.toUpperCase()}
             </span>
           ))}
@@ -101,7 +101,7 @@ export function VendorsPage() {
                 <button
                   type="button"
                   onClick={() => openVendor(s.id)}
-                  className="h-12 bg-white text-ink border-0 cursor-pointer font-cond text-[15px] font-bold tracking-[.16em] uppercase hover:bg-gold transition-colors"
+                  className="h-12 bg-white text-ink border-0 cursor-pointer font-cond text-[15px] font-bold tracking-[.08em] uppercase hover:bg-gold transition-colors"
                 >
                   Reserve Table
                 </button>

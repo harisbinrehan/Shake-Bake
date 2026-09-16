@@ -73,7 +73,7 @@ export function Newsletter() {
             />
             <button
               type="submit"
-              className="h-[56px] px-[28px] bg-ember text-white border-0 cursor-pointer font-cond text-base font-bold tracking-[.18em] uppercase transition-[background,transform] hover:bg-[#FF5A33] hover:-translate-y-px"
+              className="h-[56px] px-[28px] bg-ember text-white border-0 cursor-pointer font-cond text-base font-bold tracking-[.08em] uppercase transition-[background,transform] hover:bg-[#FF5A33] hover:-translate-y-px"
               style={{ clipPath: "polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px)" }}
             >
               Join the community

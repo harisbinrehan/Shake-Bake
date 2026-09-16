@@ -26,7 +26,7 @@ export function Footer() {
             <h3 className="m-0 mb-4 font-cond text-xs tracking-[.28em] uppercase text-muted">Explore</h3>
             <div className="flex flex-col gap-2.5 items-start">
               {footerNav.map((n) => (
-                <Link key={n.path} to={n.path} className="font-cond text-base font-semibold tracking-[.12em] uppercase text-offwhite hover:text-ember transition-colors">
+                <Link key={n.path} to={n.path} className="font-cond text-base font-medium tracking-[.06em] uppercase text-offwhite hover:text-ember transition-colors">
                   {n.label}
                 </Link>
               ))}

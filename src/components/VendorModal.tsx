@@ -59,7 +59,7 @@ export function VendorModal() {
           href={show.tables}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center h-[54px] px-[26px] mt-[18px] bg-ember text-white font-cond text-base font-bold tracking-[.18em] uppercase"
+          className="inline-flex items-center h-[54px] px-[26px] mt-[18px] bg-ember text-white font-cond text-base font-bold tracking-[.08em] uppercase"
         >
           Open official table form
         </a>
@@ -133,7 +133,7 @@ export function VendorModal() {
         <div className="flex gap-2.5 mt-5 flex-wrap">
           <button
             type="submit"
-            className="h-[54px] px-[26px] bg-ember text-white border-0 cursor-pointer font-cond text-base font-bold tracking-[.18em] uppercase"
+            className="h-[54px] px-[26px] bg-ember text-white border-0 cursor-pointer font-cond text-base font-bold tracking-[.08em] uppercase"
             style={{ opacity: status === "loading" ? 0.7 : 1 }}
           >
             {status === "loading" ? "Sending…" : "Request table"}
@@ -142,7 +142,7 @@ export function VendorModal() {
             href={show.tables}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center h-[54px] px-[26px] border border-white/[.26] text-white font-cond text-base font-bold tracking-[.18em] uppercase"
+            className="inline-flex items-center h-[54px] px-[26px] border border-white/[.26] text-white font-cond text-base font-bold tracking-[.08em] uppercase"
           >
             Official form
           </a>

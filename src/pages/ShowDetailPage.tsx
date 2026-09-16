@@ -26,7 +26,7 @@ export function ShowDetailPage() {
         <img src={showImage(show, 1800, 1000)} alt={show.title} className="absolute inset-0 w-full h-full object-cover" />
         <div aria-hidden="true" className="absolute inset-0" style={{ background: "linear-gradient(180deg,rgba(10,10,11,.82) 0%,rgba(10,10,11,.5) 40%,rgba(10,10,11,.95) 100%)" }} />
         <div className="relative w-full max-w-[1440px] mx-auto px-[clamp(18px,4vw,56px)] pt-[clamp(120px,14vw,180px)] pb-[clamp(30px,4vw,60px)]">
-          <Link to="/shows" className="inline-block mb-[18px] font-cond text-[13px] font-semibold tracking-[.22em] uppercase text-muted hover:text-white">
+          <Link to="/shows" className="inline-block mb-[18px] font-cond text-[13px] font-medium tracking-[.08em] uppercase text-muted hover:text-white">
             ← All shows
           </Link>
           <h1 className="m-0 font-display text-[clamp(38px,7vw,110px)] leading-[.93] tracking-[-.015em] uppercase">
@@ -65,14 +65,14 @@ export function ShowDetailPage() {
           </div>
         </div>
         <div className="flex flex-wrap gap-2.5 mt-5">
-          <button type="button" onClick={() => openVendor(show.id)} className="flex-1 basis-[220px] h-[58px] bg-ember text-white border-0 cursor-pointer font-cond text-[17px] font-bold tracking-[.18em] uppercase hover:bg-[#FF5A33]">
+          <button type="button" onClick={() => openVendor(show.id)} className="flex-1 basis-[220px] h-[58px] bg-ember text-white border-0 cursor-pointer font-cond text-[17px] font-bold tracking-[.08em] uppercase hover:bg-[#FF5A33]">
             Become a Vendor
           </button>
           <a
             href={show.tables}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 basis-[220px] h-[58px] flex items-center justify-center bg-transparent text-white border border-white/30 cursor-pointer font-cond text-[17px] font-bold tracking-[.18em] uppercase hover:border-white hover:bg-white/[.06]"
+            className="flex-1 basis-[220px] h-[58px] flex items-center justify-center bg-transparent text-white border border-white/30 cursor-pointer font-cond text-[17px] font-bold tracking-[.08em] uppercase hover:border-white hover:bg-white/[.06]"
           >
             Official Table Form
           </a>
@@ -91,7 +91,7 @@ export function ShowDetailPage() {
           <h3 className="mt-[30px] font-cond text-[13px] tracking-[.28em] uppercase text-muted">What to expect</h3>
           <div className="flex flex-wrap gap-2 mt-3.5">
             {categoryDefs.map((c) => (
-              <span key={c.name} className="py-[9px] px-3.5 border border-white/[.16] font-cond text-[13px] font-semibold tracking-[.18em] uppercase text-offwhite">
+              <span key={c.name} className="py-[9px] px-3.5 border border-white/[.16] font-cond text-[13px] font-medium tracking-[.07em] uppercase text-offwhite">
                 {c.name.toUpperCase()}
               </span>
             ))}

@@ -5,9 +5,9 @@ import { shows, getShowById } from "../data/shows";
 import { contacts } from "../data/venue";
 
 const primaryBtn =
-  "h-[54px] px-[26px] bg-ember text-white border-0 cursor-pointer font-cond text-base font-bold tracking-[.18em] uppercase";
+  "h-[54px] px-[26px] bg-ember text-white border-0 cursor-pointer font-cond text-base font-bold tracking-[.08em] uppercase";
 const ghostBtn =
-  "h-[54px] px-[26px] bg-transparent text-white border border-white/[.26] cursor-pointer font-cond text-base font-bold tracking-[.18em] uppercase";
+  "h-[54px] px-[26px] bg-transparent text-white border border-white/[.26] cursor-pointer font-cond text-base font-bold tracking-[.08em] uppercase";
 const labelCls = "block mb-2 font-cond text-[11px] tracking-[.26em] uppercase text-muted";
 const inputCls = "w-full h-[50px] px-3.5 bg-[#1A1A1D] border border-white/[.16] text-white text-[15px] outline-none";
 

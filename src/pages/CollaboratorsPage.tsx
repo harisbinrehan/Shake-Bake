@@ -33,7 +33,7 @@ export function CollaboratorsPage() {
                     href={l.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center h-[46px] px-[22px] border border-white/[.26] text-white font-cond text-sm font-bold tracking-[.18em] uppercase transition-colors hover:bg-ember hover:border-ember"
+                    className="inline-flex items-center h-[46px] px-[22px] border border-white/[.26] text-white font-cond text-sm font-bold tracking-[.08em] uppercase transition-colors hover:bg-ember hover:border-ember"
                   >
                     {l.label}
                   </a>

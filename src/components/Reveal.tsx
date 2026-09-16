@@ -1,64 +1,45 @@
-import { useEffect, useRef, type ElementType, type ComponentPropsWithoutRef } from "react";
+import { motion, type Variants } from "framer-motion";
+import type { ElementType, ComponentPropsWithoutRef, ReactNode } from "react";
+
+const variants: Variants = {
+  hidden: { opacity: 0, y: 28, filter: "blur(6px)" },
+  show: {
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+  },
+};
 
 /**
- * Scroll-reveal wrapper. Mirrors the prototype's behavior: sections already in view
- * paint immediately, sections below the fold fade/rise in once intersecting, and a
- * safety timeout force-reveals everything if IntersectionObserver never fires.
+ * Scroll-reveal wrapper built on framer-motion's `whileInView` — sections already in
+ * view paint immediately, sections below the fold fade/rise in once intersecting.
  */
 export function Reveal<T extends ElementType = "div">({
   as,
   className = "",
+  delay = 0,
   children,
   ...rest
-}: { as?: T; className?: string; children?: React.ReactNode } & Omit<
-  ComponentPropsWithoutRef<T>,
-  "as" | "className" | "children"
->) {
-  const ref = useRef<HTMLElement | null>(null);
-  const Tag = (as ?? "div") as ElementType;
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    const show = () => el.classList.add("is-shown");
-
-    if (typeof IntersectionObserver === "undefined" || window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) {
-      show();
-      return;
-    }
-
-    const rect = el.getBoundingClientRect();
-    if (rect.top > window.innerHeight * 0.95) {
-      let shown = false;
-      const io = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              shown = true;
-              show();
-              io.disconnect();
-            }
-          });
-        },
-        { rootMargin: "0px 0px -5% 0px", threshold: 0.02 }
-      );
-      io.observe(el);
-      const safety = window.setTimeout(() => {
-        if (!shown) show();
-      }, 1200);
-      return () => {
-        io.disconnect();
-        window.clearTimeout(safety);
-      };
-    } else {
-      show();
-    }
-  }, []);
+}: {
+  as?: T;
+  className?: string;
+  delay?: number;
+  children?: ReactNode;
+} & Omit<ComponentPropsWithoutRef<T>, "as" | "className" | "children">) {
+  const MotionTag = motion[(as ?? "div") as "div"];
 
   return (
-    <Tag ref={ref} data-reveal="" className={className} {...rest}>
+    <MotionTag
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, margin: "-80px" }}
+      variants={variants}
+      transition={{ delay }}
+      className={className}
+      {...(rest as Record<string, unknown>)}
+    >
       {children}
-    </Tag>
+    </MotionTag>
   );
 }

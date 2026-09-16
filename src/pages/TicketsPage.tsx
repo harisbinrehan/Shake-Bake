@@ -33,7 +33,7 @@ export function TicketsPage() {
             <div className="my-[22px] py-3.5 px-4 border border-dashed border-white/20 font-cond text-[15px] tracking-[.14em] uppercase" style={{ color: "#F2C14E" }}>
               Ticket information coming soon
             </div>
-            <button type="button" onClick={() => openTickets()} className="mt-auto h-14 bg-ember text-white border-0 cursor-pointer font-cond text-base font-bold tracking-[.18em] uppercase hover:bg-[#FF5A33]">
+            <button type="button" onClick={() => openTickets()} className="mt-auto h-14 bg-ember text-white border-0 cursor-pointer font-cond text-base font-bold tracking-[.08em] uppercase hover:bg-[#FF5A33]">
               Get Tickets
             </button>
           </article>
@@ -47,7 +47,7 @@ export function TicketsPage() {
             <div className="my-[22px] py-3.5 px-4 border border-dashed border-white/20 font-cond text-[15px] tracking-[.14em] uppercase text-muted">
               Table pricing confirmed per show
             </div>
-            <button type="button" onClick={() => openVendor()} className="mt-auto h-14 bg-transparent text-white border border-white/30 cursor-pointer font-cond text-base font-bold tracking-[.18em] uppercase hover:border-white hover:bg-white/[.06]">
+            <button type="button" onClick={() => openVendor()} className="mt-auto h-14 bg-transparent text-white border border-white/30 cursor-pointer font-cond text-base font-bold tracking-[.08em] uppercase hover:border-white hover:bg-white/[.06]">
               Reserve a table
             </button>
           </article>
@@ -65,7 +65,7 @@ export function TicketsPage() {
                 <span className="font-cond text-lg font-bold tracking-[.06em] uppercase">{s.title}</span>
                 <span className="font-cond text-sm tracking-[.14em] uppercase text-muted">{s.hours}</span>
                 <div className="flex justify-end">
-                  <button type="button" onClick={() => openTickets(s.id)} className="h-[46px] px-[22px] bg-ember text-white border-0 cursor-pointer font-cond text-sm font-bold tracking-[.16em] uppercase hover:bg-[#FF5A33]">
+                  <button type="button" onClick={() => openTickets(s.id)} className="h-[46px] px-[22px] bg-ember text-white border-0 cursor-pointer font-cond text-sm font-bold tracking-[.08em] uppercase hover:bg-[#FF5A33]">
                     Get Tickets
                   </button>
                 </div>

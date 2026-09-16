@@ -43,7 +43,7 @@ export function MobileMenu() {
           <button
             type="button"
             onClick={() => openVendor()}
-            className="h-14 bg-ember text-white border-0 cursor-pointer font-cond text-[17px] font-bold tracking-[.18em] uppercase"
+            className="h-14 bg-ember text-white border-0 cursor-pointer font-cond text-[17px] font-bold tracking-[.08em] uppercase"
           >
             Become a Vendor
           </button>
