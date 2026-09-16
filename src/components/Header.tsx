@@ -27,7 +27,6 @@ export function Header() {
         height: compact ? 66 : 86,
         background: compact ? "rgba(10,10,11,.88)" : "linear-gradient(180deg,rgba(10,10,11,.9) 0%,rgba(10,10,11,0) 100%)",
         backdropFilter: compact ? "blur(16px)" : "blur(0px)",
-        borderBottom: `1px solid ${compact ? "rgba(255,255,255,.12)" : "rgba(255,255,255,0)"}`,
       }}
     >
       <button
