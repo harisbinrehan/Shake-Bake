@@ -80,7 +80,7 @@ export function HomePage() {
             transition={{ duration: 0.7, delay: 0.65 }}
             className="flex flex-nowrap gap-2 sm:gap-3 mt-[clamp(22px,3vw,34px)]"
           >
-            <Magnetic className="flex-1 min-w-0">
+            <Magnetic className="min-w-0">
               <Link
                 to="/shows"
                 className="flex w-full items-center justify-center gap-2 h-[52px] sm:h-[58px] px-[clamp(10px,3vw,38px)] bg-ember text-white border-0 cursor-pointer font-cond text-[clamp(12px,3.6vw,17px)] font-bold tracking-[.06em] uppercase whitespace-nowrap transition-[background,transform,box-shadow] hover:bg-[#FF5A33] hover:-translate-y-0.5"
@@ -89,7 +89,7 @@ export function HomePage() {
                 View All Dates
               </Link>
             </Magnetic>
-            <Magnetic className="flex-1 min-w-0">
+            <Magnetic className="min-w-0">
               <button
                 type="button"
                 onClick={() => openVendor()}
@@ -235,8 +235,8 @@ export function HomePage() {
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-3">
-            <img src={wixImage("f26660_2b001973f1524c4eb006c31e9228334a~mv2.jpg", 1000, 1250)} alt="Collectors browsing vendor tables at the Johnson County Card Show" loading="lazy" className="w-full aspect-[3/4] object-cover border border-white/[.12]" />
-            <img src={wixImage("f26660_71f41ba129f145199ea15e980a28e895~mv2.jpg", 1000, 1250)} alt="Show floor at Homefield Olathe" loading="lazy" className="w-full aspect-[3/4] object-cover border border-white/[.12] mt-[clamp(20px,4vw,54px)]" />
+            <img src={wixImage("f26660_2b001973f1524c4eb006c31e9228334a~mv2.jpg", 1000, 1333)} alt="Collectors browsing vendor tables at the Johnson County Card Show" loading="lazy" className="w-full aspect-[3/4] object-cover border border-white/[.12]" />
+            <img src={wixImage("f26660_71f41ba129f145199ea15e980a28e895~mv2.jpg", 1000, 1333)} alt="Show floor at Homefield Olathe" loading="lazy" className="w-full aspect-[3/4] object-cover border border-white/[.12] mt-[clamp(20px,4vw,54px)]" />
           </div>
         </div>
       </Reveal>
@@ -424,7 +424,7 @@ function GalleryPreviewTile({ id, index }: { id: string; index: number }) {
       aria-label={`Johnson County Card Show photo ${index + 1}`}
       className="group relative p-0 border border-white/[.12] bg-panel2 cursor-pointer aspect-square overflow-hidden hover:border-ember transition-colors"
     >
-      <img src={wixImage(id, 900, 675)} alt={`Johnson County Card Show photo ${index + 1}`} loading="lazy" className="w-full h-full object-cover transition-transform duration-500 ease-[cubic-bezier(.2,.8,.2,1)] group-hover:scale-[1.08]" />
+      <img src={wixImage(id, 900, 900)} alt={`Johnson County Card Show photo ${index + 1}`} loading="lazy" className="w-full h-full object-cover transition-transform duration-500 ease-[cubic-bezier(.2,.8,.2,1)] group-hover:scale-[1.08]" />
     </button>
   );
 }
@@ -438,7 +438,7 @@ function SocialTile({ id, index }: { id: string; index: number }) {
       aria-label={`Johnson County Card Show photo ${index + 1}`}
       className="group relative p-0 border-0 bg-panel2 cursor-pointer aspect-square overflow-hidden"
     >
-      <img src={wixImage(id, 900, 675)} alt={`Johnson County Card Show photo ${index + 1}`} loading="lazy" className="w-full h-full object-cover opacity-[.82] transition-[opacity,transform] duration-500 ease-[cubic-bezier(.2,.8,.2,1)] group-hover:opacity-100 group-hover:scale-[1.07]" />
+      <img src={wixImage(id, 900, 900)} alt={`Johnson County Card Show photo ${index + 1}`} loading="lazy" className="w-full h-full object-cover opacity-[.82] transition-[opacity,transform] duration-500 ease-[cubic-bezier(.2,.8,.2,1)] group-hover:opacity-100 group-hover:scale-[1.07]" />
     </button>
   );
 }

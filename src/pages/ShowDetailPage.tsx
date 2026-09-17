@@ -129,7 +129,7 @@ export function ShowDetailPage() {
                   aria-label={`Johnson County Card Show photo ${index + 1}`}
                   className="p-0 border border-white/[.12] bg-panel2 cursor-pointer aspect-square overflow-hidden hover:border-ember transition-colors"
                 >
-                  <img src={wixImage(id, 900, 675)} alt={`Johnson County Card Show photo ${index + 1}`} loading="lazy" className="w-full h-full object-cover" />
+                  <img src={wixImage(id, 900, 900)} alt={`Johnson County Card Show photo ${index + 1}`} loading="lazy" className="w-full h-full object-cover" />
                 </button>
               );
             })}

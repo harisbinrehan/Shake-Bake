@@ -50,7 +50,7 @@ export function ExperiencePage() {
           </h2>
           <div className="grid gap-3" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))" }}>
             {categoryDefs.map((c) => (
-              <article key={c.name} className="group relative aspect-[4/5] overflow-hidden border border-white/[.12] hover:border-ember/70 transition-colors">
+              <article key={c.name} className="group relative aspect-[3/4] overflow-hidden border border-white/[.12] hover:border-ember/70 transition-colors">
                 <img
                   src={wixImage(c.imageId, 700, 933)}
                   alt={`${c.name} at the Johnson County Card Show`}
